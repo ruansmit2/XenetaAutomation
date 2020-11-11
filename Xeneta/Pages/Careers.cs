@@ -28,7 +28,7 @@ namespace Xeneta.Pages
         public IWebElement VisitNewYork => driver.FindElement(By.XPath("//*[@id='slick-slide01']/div/div/div/a[2]"));
         public IWebElement VisitHamberg => driver.FindElement(By.XPath("//*[@id='slick-slide02']/div/div/div/a[2]"));
         public IWebElement ApplyHere => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div/div[2]/div[1]/p[10]/a"));
-        public IWebElement OpenApplication => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div/div[1]/div/h4"));
+        public IWebElement OpenApplication => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div"));
 
         public bool XenetaIsOneTabs()
         {
