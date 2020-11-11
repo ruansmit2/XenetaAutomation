@@ -61,4 +61,4 @@ dotnet test --logger trx
 ### Issues found during automation testing
 11/11/2020 : https://www.xeneta.com/demo popup buttons does not work.
 
-***Error Message:*** ``` OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <a class="popup-btn" href="#form-popup-1" rel="modal:open">...</a> is not clickable at point ```
+***Error Message:*** ``` OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <a class="popup-btn" href="#form-popup-1" rel="modal:open">...</a> is not clickable at point ``` This will also affect the "Get Demo" in the header section.
