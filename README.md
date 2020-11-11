@@ -13,9 +13,9 @@ The pages to use for the task:
 
 **Tool/technology**
 
-*C#
-*Selenuim
-*NUnit framework
+* C#
+* Selenuim
+* NUnit framework
 
 ### How do I get started?
 
