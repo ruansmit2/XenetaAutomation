@@ -3,11 +3,18 @@
 ### Xeneta Automation Project
 
 Test Automation Engineer - technical task.
+
+**Detals:**
 We would like you to create automated test cases for pages at our public website as it shares some of the features with our main product. Task
 details are described below.
 The pages to use for the task:
 * https://www.xeneta.com/demo
 * https://www.xeneta.com/careers
+
+**Tool/technology**
+*C#
+*Selenuim
+*NUnit framework
 
 ### How do I get started?
 
