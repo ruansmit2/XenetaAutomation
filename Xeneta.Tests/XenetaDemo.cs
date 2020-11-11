@@ -28,7 +28,7 @@ namespace Tests
             driver.Quit();
         }
 
-        [Test, Category("Check Icon on the One to One Demo")]
+        [Test, Category("Check Icon on the One to One Demo and Interact with the popup")]
         public void OneOnOneIcon()
         {
             OneOnOneDemo demo = new OneOnOneDemo(driver);
@@ -46,8 +46,8 @@ namespace Tests
             demo.closeModalDialog();
         }
 
-        [Test, Category("Click on the one one one Schedule button")]
-        public void OneOnOneShedule()
+        [Test, Category("Check watch videos icon and interact with the popup")]
+        public void GroupLiveDemo()
         {
             WatchVideos Video = new WatchVideos(driver);
             OneOnOneDemo demo = new OneOnOneDemo(driver);
@@ -68,7 +68,7 @@ namespace Tests
             demo.closeModalDialog();
         }
 
-        [Test]
+        [Test, Category("Negative testing on the one on one demo popup")]
         public void NegativeTest()
         {
             OneOnOneDemo demo = new OneOnOneDemo(driver);
@@ -85,7 +85,7 @@ namespace Tests
             demo.closeModalDialog();
         }
 
-        [Test]
+        [Test, Category("Check Icon on the group live Demo and Interact with the popup")]
         public void SignUpHere()
         {
             GroupLiveDemo LiveDemo = new GroupLiveDemo(driver);

@@ -30,7 +30,7 @@ namespace Xeneta.Tests
             driver.Quit();
         }
 
-        [Test]
+        [Test, Category("Interact with the out values tabs")]
         public void XenetaIsOne()
         {
             driver.Navigate().Refresh();
@@ -49,7 +49,7 @@ namespace Xeneta.Tests
             Assert.That(currentCareers.TransparencybuildsTrustTab, Is.True);
         }
 
-        [Test]
+        [Test, Category("Interact with the roles accordian")]
         public void CareersTabs()
         {
             Careers currentCareers = new Careers(driver);
@@ -65,7 +65,7 @@ namespace Xeneta.Tests
 
         }
 
-        [Test]
+        [Test, Category("Interact with the global tribe section")]
         public void GlobalTribe()
         {
             var title = string.Empty;
@@ -92,7 +92,7 @@ namespace Xeneta.Tests
 
         }
 
-        [Test]
+        [Test, Category("Interact with the roles")]
         public void Roles()
         {
             Careers currentCareers = new Careers(driver);
@@ -101,7 +101,7 @@ namespace Xeneta.Tests
             currentCareers.OpenAccordian();
         }
 
-        [Test]
+        [Test, Category("Check link redirect url")]
         public void VisitLinks()
         {
             Careers currentCareers = new Careers(driver);
