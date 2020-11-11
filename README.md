@@ -17,7 +17,7 @@ You need to have .NET code version 2.2 or higher. You can download it [here](htt
 ### How do I run the project
 
 In Command prompt or terminal, you need to be in the Xeneta.Tests directory.
-This can be achieved by unsinf ```cd {path\to\Xeneta.Tests}```
+This can be achieved by unsinfg  ```cd {path\to\Xeneta.Tests}```
 
 Type the following: 
 ```
