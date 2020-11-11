@@ -56,4 +56,4 @@ dotnet test --logger trx
 **Careers**
 - Can I interact with the four tabs 
 - Can I interact with the current open roles
-* Can I interact with global tribe section. Does the view do what it states (Navigate)
+- Can I interact with global tribe section. Does the view do what it states (Navigate)
