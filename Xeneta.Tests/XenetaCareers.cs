@@ -7,7 +7,6 @@ using System.Text;
 using NUnit.Framework;
 using Xeneta.Pages;
 using OpenQA.Selenium.Support.UI;
-
 namespace Xeneta.Tests
 {
     public class XenetaCareers
@@ -36,16 +35,15 @@ namespace Xeneta.Tests
             driver.Navigate().Refresh();
             Careers currentCareers = new Careers(driver);
 
-            currentCareers.XenetaIsOneTabs();
             Assert.That(currentCareers.XenetaIsOneTabs, Is.True);
 
-            currentCareers.ModernizationthroughdataTabs();
+
             Assert.That(currentCareers.ModernizationthroughdataTabs, Is.True);
 
-            currentCareers.VarietyandFairnessTab();
+
             Assert.That(currentCareers.VarietyandFairnessTab, Is.True);
 
-            currentCareers.TransparencybuildsTrustTab();
+
             Assert.That(currentCareers.TransparencybuildsTrustTab, Is.True);
         }
 
@@ -54,13 +52,10 @@ namespace Xeneta.Tests
         {
             Careers currentCareers = new Careers(driver);
 
-            currentCareers.ClickModernizationthroughdataTab();
             Assert.That(currentCareers.ClickModernizationthroughdataTab, Is.True);
 
-            currentCareers.ClickVarietyandFairnessTab();
             Assert.That(currentCareers.ClickVarietyandFairnessTab, Is.True);
 
-            currentCareers.ClickTransparencybuildsTrustTab();
             Assert.That(currentCareers.ClickTransparencybuildsTrustTab, Is.True);
 
         }
@@ -92,15 +87,6 @@ namespace Xeneta.Tests
 
         }
 
-        [Test, Category("Interact with the roles")]
-        public void Roles()
-        {
-            Careers currentCareers = new Careers(driver);
-
-            currentCareers.OpenRoles();
-            currentCareers.OpenAccordian();
-        }
-
         [Test, Category("Check link redirect url")]
         public void VisitLinks()
         {
@@ -108,5 +94,14 @@ namespace Xeneta.Tests
             Assert.That(currentCareers.VisitLinks, Is.True);
 
         }
+
+        [Test, Category("Interact with the roles")]
+        public void ApplyForRoles()
+        {
+            Careers currentCareers = new Careers(driver);
+
+            Assert.IsTrue(currentCareers.Apply().Contains("bamboohr"));
+        }
+
     }
 }

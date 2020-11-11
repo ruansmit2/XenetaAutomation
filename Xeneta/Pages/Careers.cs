@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -21,12 +22,13 @@ namespace Xeneta.Pages
         public IWebElement VarietyandFairness => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556886']/div/div/div/ul/li[3]"));
         public IWebElement TransparencybuildsTrust => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556886']/div/div/div/ul/li[4]"));
         public IWebElement Title => driver.FindElement(By.TagName("title"));
-        IList<IWebElement> Roles => driver.FindElements(By.ClassName("accordion_header.accordion-start"));
+        IList<IWebElement> Roles => driver.FindElements(By.ClassName("accordion_group"));
         public IWebElement RoleExpanded => driver.FindElement(By.ClassName("accordion_group expanded"));
         public IWebElement VisitOslo => driver.FindElement(By.XPath("//*[@id='slick-slide00']/div/div/div/a[2]"));
         public IWebElement VisitNewYork => driver.FindElement(By.XPath("//*[@id='slick-slide01']/div/div/div/a[2]"));
         public IWebElement VisitHamberg => driver.FindElement(By.XPath("//*[@id='slick-slide02']/div/div/div/a[2]"));
-
+        public IWebElement ApplyHere => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div/div[2]/div[1]/p[10]/a"));
+        public IWebElement OpenApplication => driver.FindElement(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div/div[1]/div/h4"));
 
         public bool XenetaIsOneTabs()
         {
@@ -132,16 +134,6 @@ namespace Xeneta.Pages
             VisitHamberg.Click();
         }
 
-        public void OpenRoles()
-        {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//*[@id='hs_cos_wrapper_widget_27351556888']/div/div/div/div/div/div[2]/div/div[1]/div/h4")));
-            List<string> validations = new List<string>();
-            foreach (IWebElement element in Roles)
-            {
-                element.Click();
-            }
-        }
-
         public bool OpenAccordian()
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.ClassName("subscription-model-inner")));
@@ -168,6 +160,17 @@ namespace Xeneta.Pages
             }
 
             return result;
+        }
+
+        public string Apply()
+        {
+            OpenApplication.Click();
+            ApplyHere.Click();
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.TagName("title")));
+            driver.SwitchTo().Window(driver.WindowHandles.Last());
+            string URL = driver.Url;
+            driver.SwitchTo().Window(driver.WindowHandles.First());
+            return URL;
         }
     }
 }
