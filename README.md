@@ -34,10 +34,10 @@ dotnet test --logger trx
 ### List of functional checks I would perform on the above pages
 
 **Demo**
-* Can I interact with the three circles and does the correct icon dispaly
+* Can I interact with the three circles and does the correct icon display
 * Can I interact with the bottom buttons
 * Can I interact with the popups
-* Does theups have validation such as a maximum of 10 characters, numbers(0-9), letters(a-z, A-z), special characters (only underscore, period, hyphen allowed) and it cannot be left blank.
+* Does the popups have validation such as a maximum of 10 characters, numbers(0-9), letters(a-z, A-z), special characters (only underscore, period, hyphen allowed) and it cannot be left blank.
 * Boundry tests with textboxes
 * Security Testing on the popups such as XSS (OWASP)
 
