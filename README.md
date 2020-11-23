@@ -39,7 +39,7 @@ dotnet test --logger trx
 * Can I interact with the popups
 * Does theups have validation such as a maximum of 10 characters, numbers(0-9), letters(a-z, A-z), special characters (only underscore, period, hyphen allowed) and it cannot be left blank.
 * Boundry tests with textboxes
-* Security Testing on the popups such as XXS (OWASP)
+* Security Testing on the popups such as XSS (OWASP)
 
 **Careers**
 * Does the company values section tabs work as expected and contains relevant content.
